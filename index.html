@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha512-c93ifPoTvMdEJH/rKIcBx//AL1znq9+4/RmMGafI/vnTFe/dKwnn1uoeszE2zJBQTS1Ck5CqSBE+34ng2PthJg==" crossorigin="anonymous" referrerpolicy="no-referrer" >        
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+        <title>Sidebar</title>
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+
+        <!--Header area start-->
+        <header>
+            <label for="check">
+                <i class="fas fa-bars" id="sidebar-btn"></i>
+            </label>
+            <div class="left-area">
+                <h3>Suara <span>Surabaya</span></h3>
+            </div>
+            <div class="right-area">
+                <a href="#" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </header>
+        <!--Header area end-->
+
+        <!--Mobile navbar start-->
+        <div class="mobile-nav">
+            <div class="nav-bar">
+                <a href="#">
+                <img src="upload/01_team.png" alt="profile-img" class="mobile-profile-img">
+                </a>
+                <i class="fas fa-bars nav_btn"></i> 
+            </div>
+            <div class="mobile-nav-items">
+                <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <a href="#"><i class="fas fa-check"></i><span>Something</span></a>
+                <a href="#"><i class="fas fa-align-justify"></i><span>Something</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
+            </div>
+        </div>
+        <!--Mobile navbar end-->
+
+        <!--Sidebar start-->
+        <div class="sidebar">
+            <div class="profile-info">
+                <a href="#">
+                 <img src="upload/01_team.png" alt="logo">
+                 <h4>Suara Surabaya</h4>
+                </a>
+            </div>
+            <div class="sidebar-icons">
+             <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+             <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+             <a href="#"><i class="fas fa-check"></i><span>Something</span></a>
+             <a href="#"><i class="fas fa-align-justify"></i><span>Something</span></a>
+             <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+             <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
+            </div>  
+
+        </div>
+        <!--Sidebar end-->
+
+        <div class="content">
+            <div class="card">
+                <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos at sint esse non accusantium, soluta qui eligendi dolor maxime harum perspiciatis consectetur omnis ipsa quos perferendis corporis quod eos magni officia voluptatum. Adipisci doloribus, minima vitae libero quisquam repellat cupiditate aliquam laboriosam possimus natus, odit similique. Sed vitae porro, exercitationem rerum quia architecto odio nisi numquam neque maiores repellendus iste, aperiam labore error perferendis quis eum repellat eaque sint deleniti. Molestias, eius illo ad aspernatur qui cupiditate architecto exercitationem esse voluptatem aliquam totam ipsam quo necessitatibus nisi! Porro iusto dolore reprehenderit explicabo nobis aliquam id error ipsam, sit quas.</p>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.nav_btn').click(function(){
+                    $('.mobile-nav-items').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+</html>
