@@ -25,22 +25,17 @@ header {
     color: #6998AB;
 }
 
-.logout-btn {
+.prof-img img {
     padding: 5px;
     background-color: #1A374D;
     color: white;
     text-decoration: none;
     float: right;
-    margin-top: -35px;
-    margin-right: 40px;
-    border-radius: 2px;
-    font-size: 30px;
-    transition: 0.5s;
-    transition-property: background;
-}
-
-.logout-btn:hover {
-    color: #B1D0E0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -43px;
+    margin-right: 60px;
 }
 
 .sidebar {
@@ -58,26 +53,27 @@ header {
     overflow-y: auto;
 }
 
-.profile-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.sidebar::-webkit-scrollbar{
+    display: none;
 }
 
-.profile-info h4 {
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 20px;
-
+.sidebar-icons li {
+    list-style: none;
 }
 
-.profile-info img {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-    margin-left: 9px;
+.sidebar-icons li a .fa-angle-right {
+    margin-left: 65px;
+    position: relative;
+    transition: transform 0.3s;
+    font-size: 20px;
+}
+
+.sidebar-icons ul{
+    display: none;
+}
+
+.sidebar-icons li a:hover .fa-angle-right {
+    transform: translateX(-50%) rotate(90deg);
 }
 
 .sidebar .sidebar-icons a{
@@ -98,6 +94,10 @@ header {
 
 .sidebar .sidebar-icons i{
     padding-right: 10px;
+}
+
+.sidebar .sidebar-icons ul{
+    display: none;
 }
 
 label #sidebar-btn{
@@ -145,10 +145,6 @@ label #sidebar-btn:hover{
     margin-left: 60px;
 }
 
-#check:checked ~ .sidebar .profile-info{
-    display: none;
-}
-
 #check{
     display: none;
 }
@@ -156,6 +152,29 @@ label #sidebar-btn:hover{
 .mobile-nav {
     display: none;
 }
+
+#check:checked ~ .sidebar .sidebar-icons li .fa-angle-right{
+    display: none;
+}
+
+#check:checked ~ .sidebar .sidebar-icons li ul li{
+    display: none;
+    overflow-y: hidden;
+}
+
+.sidebar-icons .show {
+    margin:0;
+    padding:0;
+    display: block !important;
+}
+.sidebar-icons .show1 {
+    margin: 0;
+    padding: 0;
+    display: block !important;
+}
+
+
+  
 
 /* Responsive CSS */
 
@@ -179,6 +198,10 @@ label #sidebar-btn:hover{
     .mobile-nav {
         display: block;
         width: calc(100% - 0%);
+    }
+
+    .prof-img img {
+        display: none;
     }
 
     .nav-bar {
@@ -212,6 +235,21 @@ label #sidebar-btn:hover{
         background: #1A374D;
         display: none;
     }
+    .mobile-nav-items li {
+        list-style: none;
+    }
+    .mobile-nav-items li a .fa-angle-right {
+        margin-left: 10px;
+        position: relative;
+        transition: transform 0.3s;
+        font-size: 20px;
+    }
+    .mobile-nav .mobile-nav-items li a:hover .fa-angle-right {
+        transform: translateX(-50%) rotate(90deg);
+    }
+    .mobile-nav-items ul {
+        display: none;
+    }
 
     .mobile-nav-items a {
         color: #fff;
@@ -235,5 +273,16 @@ label #sidebar-btn:hover{
 
     .active {
         display: block;
+    }
+
+    .mobile-nav-items .show {
+        display: block !important;
+        margin: 0;
+        padding: 0;
+    }
+    .mobile-nav-items .show1 {
+        display: block !important;
+        margin: 0;
+        padding: 0;
     }
 }
