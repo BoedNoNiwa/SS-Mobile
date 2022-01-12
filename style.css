@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -139,6 +143,7 @@ label #sidebar-btn:hover{
     background-size: cover;
     height: 100vh;
     transition: 0.5s;
+    text-align: center;
 }
 
 #check:checked ~ .content {
@@ -172,6 +177,7 @@ label #sidebar-btn:hover{
     padding: 0;
     display: block !important;
 }
+
 
 
   
