@@ -51,7 +51,7 @@ header {
     position: fixed;
     left: 0;
     width: 250px;
-    height: calc(100% - 9%);
+    height: calc(100% - 0%);
     transition: 0.5s;
     transition-property: left;
     overflow-y: auto;
@@ -224,7 +224,7 @@ header .nav-btn {
 
     .nav-bar {
         background: #1A374D;
-        width: (100% - 0px);
+        width: calc(100%-0px);
         margin-top: 70px;
         display: flex;
         justify-content: space-between;
