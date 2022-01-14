@@ -24,6 +24,7 @@
                     <img src="upload/01_team.png">
                 </a>
             </div>
+            <i class="fas fa-bars nav-btn"></i> 
         </header>
         <!--Header area end-->
 
@@ -33,13 +34,14 @@
                 <a href="https://bit.ly/33oNK6I" target="_blank">
                 <img src="upload/01_team.png" alt="profile-img" class="mobile-profile-img">
                 </a>
-                <i class="fas fa-bars nav_btn"></i> 
+                <h3>Suara <span>Surabaya</span></h3>
+                <i class="fas fa-bars nav-btn"></i> 
             </div>
             <div class="mobile-nav-items">
                 <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
                 <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
                 <li>
-                    <a href="#" class="mobile-firstt-btn">
+                    <a href="#" class="mobile-first-btn">
                         <i class="fas fa-check"></i><span>Something</span>
                         <div class="fas fa-angle-right first"></div>
                     </a>
@@ -72,7 +74,7 @@
         <div class="sidebar">
             
             <div class="sidebar-icons">
-             <a onClick="document.getElementById('card1').scrollIntoView();"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+             <a href="card1"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
              <a href="#"><i class="fas fa-address-card"></i><span> Profile</span></a>
              <li>
                 <a class="first-btn">
@@ -179,7 +181,7 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
-                $('.nav_btn').click(function(){
+                $('.nav-btn').click(function(){
                     $('.mobile-nav-items').toggleClass('active');
                 });
             });
