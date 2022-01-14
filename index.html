@@ -66,6 +66,20 @@
                 </li>
                 <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
                 <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <li>
+                    <a href="#" class="mobile-third-btn">
+                        <i class="fas fa-check"></i><span>Something</span>
+                        <div class="fas fa-angle-right first"></div>
+                    </a>
+                    
+                    <ul class="mobile-third-show">
+                      <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                    </ul>
+                </li>
             </div>
         </div>
         <!--Mobile navbar end-->
@@ -192,12 +206,12 @@
             });
 
             $('.second-btn').click (function(){
-                $('.sidebar-icons .second-show').toggleClass("show1");
+                $('.sidebar-icons .second-show').toggleClass("show");
                 $('.sidebar-icons .second-show li second').toggleClass("rotate");
             });
 
             $('.third-btn').click (function(){
-                $('.sidebar-icons .third-show').toggleClass("show1");
+                $('.sidebar-icons .third-show').toggleClass("show");
                 $('.sidebar-icons .third-show li third').toggleClass("rotate");
             });
 
@@ -207,8 +221,13 @@
             });
 
             $('.mobile-second-btn').click (function(){
-                $('.mobile-nav-items .mobile-second-show').toggleClass("show1");
+                $('.mobile-nav-items .mobile-second-show').toggleClass("show");
                 $('.mobile-nav-items .mobile-second-show li second').toggleClass("rotate");
+            });
+
+            $('.mobile-third-btn').click (function(){
+                $('.mobile-nav-items .mobile-third-show').toggleClass("show");
+                $('.mobile-nav-items .mobile-third-show li third').toggleClass("rotate");
             });
 
         </script>
