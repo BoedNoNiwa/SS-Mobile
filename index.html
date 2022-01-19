@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha512-c93ifPoTvMdEJH/rKIcBx//AL1znq9+4/RmMGafI/vnTFe/dKwnn1uoeszE2zJBQTS1Ck5CqSBE+34ng2PthJg==" crossorigin="anonymous" referrerpolicy="no-referrer" >        
         <link rel="stylesheet" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
         <link rel="shortcut icon" href="images/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
         <title>SS Mobile Guide</title>
     </head>
     <body>
@@ -21,73 +21,14 @@
                 <h3>Suara <span>Surabaya</span></h3>
             </div>
             <div class="right-area">
-                <a href="https://bit.ly/33oNK6I" class="prof-img" target="_blank">
-                    <img src="upload/01_team.png">
-                </a>
+                    <img src="upload/01_team.png" onclick="myFunction()" class="prof-img">
             </div>
             <i class="fas fa-bars nav-btn"></i> 
         </header>
         <!--Header area end-->
 
-        <!--Mobile navbar start-->
-        <div class="mobile-nav">
-            <div class="nav-bar">
-                <a href="https://bit.ly/33oNK6I" target="_blank">
-                <img src="upload/01_team.png" alt="profile-img" class="mobile-profile-img">
-                </a>
-                <h3>Suara <span>Surabaya</span></h3>
-                <i class="fas fa-bars nav-btn"></i> 
-            </div>
-            <div class="mobile-nav-items">
-                <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
-                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
-                <li>
-                    <a href="#" class="mobile-first-btn">
-                        <i class="fas fa-check"></i><span>Something</span>
-                        <div class="fas fa-angle-right first"></div>
-                    </a>
-                    
-                    <ul class="mobile-first-show">
-                      <li><a href="#">Link 1</a></li>
-                      <li><a href="#">Link 2</a></li>
-                      <li><a href="#">Link 3</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="mobile-second-btn">
-                        <i class="fas fa-check"></i><span>Something</span>
-                        <div class="fas fa-angle-right second"></div>
-                    </a>
-                    
-                    <ul class="mobile-second-show">
-                      <li><a href="#">Link 1</a></li>
-                      <li><a href="#">Link 2</a></li>
-                      <li><a href="#">Link 3</a></li>
-                    </ul>
-                </li>
-                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
-                <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
-                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
-                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
-                <li>
-                    <a href="#" class="mobile-third-btn">
-                        <i class="fas fa-check"></i><span>Something</span>
-                        <div class="fas fa-angle-right first"></div>
-                    </a>
-                    
-                    <ul class="mobile-third-show">
-                      <li><a href="#">Link 1</a></li>
-                      <li><a href="#">Link 2</a></li>
-                      <li><a href="#">Link 3</a></li>
-                    </ul>
-                </li>
-            </div>
-        </div>
-        <!--Mobile navbar end-->
-
         <!--Sidebar start-->
         <div class="sidebar">
-            
             <div class="sidebar-icons">
              <a href="card1"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
              <a href="#"><i class="fas fa-address-card"></i><span> Profile</span></a>
@@ -132,18 +73,76 @@
              <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
              <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
              <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
-             
             </div>  
 
         </div>
         <!--Sidebar end-->
 
+        <!--Mobile navbar start-->
+        <div class="mobile-nav">
+            <div class="nav-bar">
+                <a href="https://bit.ly/33oNK6I" target="_blank">
+                <img src="upload/01_team.png" alt="profile-img" class="mobile-profile-img">
+                </a>
+                <h3>Suara <span>Surabaya</span></h3>
+                <i class="fas fa-bars nav-btn"></i> 
+            </div>
+            <div class="mobile-nav-items">
+                <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <li>
+                    <a href="#" class="mobile-first-btn">
+                        <i class="fas fa-check"></i><span>Something</span>
+                        <div class="fas fa-angle-right first"></div>
+                    </a>
+                    
+                    <ul class="mobile-first-show">
+                      <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="mobile-second-btn">
+                        <i class="fas fa-check"></i><span>Something</span>
+                        <div class="fas fa-angle-right second"></div>
+                    </a>
+                    
+                    <ul class="mobile-second-show">
+                      <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                    </ul>
+                </li>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <a href="#"><i class="fas fa-info-circle"></i><span> About</span></a>
+                <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+            </div>
+        </div>
+        <!--Mobile navbar end-->
+
+        <!--Content start here-->
         <div class="content">
             <div class="card" id="card1">
                 <img src="upload/cat_01.jpg" height="250px" width="500px">
                 <h1>Lorem, ipsum.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos at sint esse non accusantium, soluta qui eligendi dolor maxime harum perspiciatis consectetur omnis ipsa quos perferendis corporis quod eos magni officia voluptatum. Adipisci doloribus, minima vitae libero quisquam repellat cupiditate aliquam laboriosam possimus natus, odit similique. Sed vitae porro, exercitationem rerum quia architecto odio nisi numquam neque maiores repellendus iste, aperiam labore error perferendis quis eum repellat eaque sint deleniti. Molestias, eius illo ad aspernatur qui cupiditate architecto exercitationem esse voluptatem aliquam totam ipsam quo necessitatibus nisi! Porro iusto dolore reprehenderit explicabo nobis aliquam id error ipsam, sit quas.</p>
             </div>
+            
+            <div class="card">
+                <nav class="table_of_contents">
+                    <span>Table Of Content</span>
+                    <ol>
+                      <li><a href="#cardX">Toggle Section 1</a></li>
+                      <li><a href="#section2">Toggle Section 2</a></li>
+                      <li><a href="#section3">Toggle Section 3</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <br><br><br><br><br><br><br>
+            
             <div class="card"> 
                 <h1>Lorem, ipsum.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos at sint esse non accusantium, soluta qui eligendi dolor maxime harum perspiciatis consectetur omnis ipsa quos perferendis corporis quod eos magni officia voluptatum. Adipisci doloribus, minima vitae libero quisquam repellat cupiditate aliquam laboriosam possimus natus, odit similique. Sed vitae porro, exercitationem rerum quia architecto odio nisi numquam neque maiores repellendus iste, aperiam labore error perferendis quis eum repellat eaque sint deleniti. Molestias, eius illo ad aspernatur qui cupiditate architecto exercitationem esse voluptatem aliquam totam ipsam quo necessitatibus nisi! Porro iusto dolore reprehenderit explicabo nobis aliquam id error ipsam, sit quas.</p>
@@ -188,12 +187,14 @@
                 <h1>Lorem, ipsum.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos at sint esse non accusantium, soluta qui eligendi dolor maxime harum perspiciatis consectetur omnis ipsa quos perferendis corporis quod eos magni officia voluptatum. Adipisci doloribus, minima vitae libero quisquam repellat cupiditate aliquam laboriosam possimus natus, odit similique. Sed vitae porro, exercitationem rerum quia architecto odio nisi numquam neque maiores repellendus iste, aperiam labore error perferendis quis eum repellat eaque sint deleniti. Molestias, eius illo ad aspernatur qui cupiditate architecto exercitationem esse voluptatem aliquam totam ipsam quo necessitatibus nisi! Porro iusto dolore reprehenderit explicabo nobis aliquam id error ipsam, sit quas.</p>
             </div>
-            <div class="card">
+            <div class="card" id="cardX">
                 <h1>Lorem, ipsum.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos at sint esse non accusantium, soluta qui eligendi dolor maxime harum perspiciatis consectetur omnis ipsa quos perferendis corporis quod eos magni officia voluptatum. Adipisci doloribus, minima vitae libero quisquam repellat cupiditate aliquam laboriosam possimus natus, odit similique. Sed vitae porro, exercitationem rerum quia architecto odio nisi numquam neque maiores repellendus iste, aperiam labore error perferendis quis eum repellat eaque sint deleniti. Molestias, eius illo ad aspernatur qui cupiditate architecto exercitationem esse voluptatem aliquam totam ipsam quo necessitatibus nisi! Porro iusto dolore reprehenderit explicabo nobis aliquam id error ipsam, sit quas.</p>
             </div>
         </div>
+        <!--Content end here-->
 
+        <!--Javascript start here-->
         <script type="text/javascript">
             $(document).ready(function(){
                 $('.nav-btn').click(function(){
@@ -201,36 +202,38 @@
                 });
             });
 
+            function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("showX");
+}
+
             $('.first-btn').click (function(){
                 $('.sidebar-icons .first-show').toggleClass("show");
-                $('.sidebar-icons .first-show li first').toggleClass("rotate");
+                $('.sidebar-icons li .first-btn .first').toggleClass("rotateX");
             });
 
             $('.second-btn').click (function(){
                 $('.sidebar-icons .second-show').toggleClass("show");
-                $('.sidebar-icons .second-show li second').toggleClass("rotate");
+                $('.sidebar-icons li .second-btn .second').toggleClass("rotateX");
             });
 
             $('.third-btn').click (function(){
                 $('.sidebar-icons .third-show').toggleClass("show");
-                $('.sidebar-icons .third-show li third').toggleClass("rotate");
+                $('.sidebar-icons li .third-btn .third').toggleClass("rotateX");
             });
 
             $('.mobile-first-btn').click (function(){
                 $('.mobile-nav-items .mobile-first-show').toggleClass("show");
-                $('.mobile-nav-items .mobile-first-show li first').toggleClass("rotate");
+                $('.mobile-nav-items li .mobile-first-btn .first').toggleClass("rotateX");
             });
 
             $('.mobile-second-btn').click (function(){
                 $('.mobile-nav-items .mobile-second-show').toggleClass("show");
-                $('.mobile-nav-items .mobile-second-show li second').toggleClass("rotate");
-            });
-
-            $('.mobile-third-btn').click (function(){
-                $('.mobile-nav-items .mobile-third-show').toggleClass("show");
-                $('.mobile-nav-items .mobile-third-show li third').toggleClass("rotate");
+                $('.mobile-nav-items li .mobile-second-btn .second').toggleClass("rotateX");
             });
 
         </script>
+        <!--Javascript end here-->
+
     </body>
 </html>

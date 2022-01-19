@@ -29,7 +29,7 @@ header {
     color: #6998AB;
 }
 
-.prof-img img {
+.prof-img  {
     padding: 5px;
     background-color: #1A374D;
     color: white;
@@ -51,7 +51,7 @@ header {
     position: fixed;
     left: 0;
     width: 250px;
-    height: calc(100% - 0%);
+    height: calc(100% - 13%);
     transition: 0.5s;
     transition-property: left;
     overflow-y: auto;
@@ -72,7 +72,7 @@ header {
     font-size: 20px;
 }
 
-.sidebar-icons ul{
+-icons ul{
     display: none;
 }
 
@@ -183,14 +183,65 @@ header .nav-btn {
     display: none;
 }
 
+.rotateX{
+    transform: translateX(-50%) rotate(90deg);
+}
+
+/*T.0.C Start*/
+.table_of_contents{
+    float:left;
+    padding:5px;
+    margin:20px 10px 10px 0px;
+    background-color:#ffffff;
+    font-weight:bold;
+    width:20%;
+    max-height:300px;
+    overflow-y:scroll;
+}
+
+.table_of_contents ol li{
+    margin-left:0px;
+}
+
+.table_of_contents ol li:hover{
+    margin-left:0px;
+    transition:all 0.5s;
+}
+
+.table_of_contents span:after{
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    height:0;
+    width:0;
+    margin:0 0 0 6px;
+    border:4px solid transparent;
+    border-top-color:#656565;
+}
+
+.table_of_contents::-webkit-scrollbar{
+    width:8px
+}
+
+.table_of_contents::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    background-color:#4f4f4f
+}
+/*T.0.C End*/
   
 
 /* Responsive CSS */
-
 @media screen and (max-width: 780px) {
     header{
         display: none;
     }
+    
+    /*T.0.C Start*/
+    .table_of_contents{
+        display:block;
+        width:100%
+    }
+    /*T.0.C End*/
 
     .sidebar    {
         display: none;
@@ -216,6 +267,10 @@ header .nav-btn {
         margin-top: 0;
         padding: 0;
         padding-bottom: 30px;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: scroll;
+        
     }
 
     .prof-img img {
@@ -266,18 +321,18 @@ header .nav-btn {
         background: #1A374D;
         display: none;
     }
+    
     .mobile-nav-items li {
         list-style: none;
     }
+
     .mobile-nav-items li a .fa-angle-right {
         margin-left: 10px;
         position: relative;
         transition: transform 0.3s;
         font-size: 20px;
     }
-    .mobile-nav .mobile-nav-items li a:hover .fa-angle-right {
-        transform: translateX(-50%) rotate(90deg);
-    }
+
     .mobile-nav-items ul {
         display: none;
     }
