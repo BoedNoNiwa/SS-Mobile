@@ -1,0 +1,173 @@
+<?php
+session_start();
+if (!isset($_SESSION['log'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha512-c93ifPoTvMdEJH/rKIcBx//AL1znq9+4/RmMGafI/vnTFe/dKwnn1uoeszE2zJBQTS1Ck5CqSBE+34ng2PthJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/917593517990215680/937559303890546718/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+
+    <!-- CSS fakeloader -->
+    <link rel="stylesheet" href="css/fakeLoader.css">
+
+    <title>Admin Suara Surabaya</title>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+    <!--Header area start-->
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar-btn"></i>
+        </label>
+        <div class="left-area">
+            <img src="https://cdn.discordapp.com/attachments/917593517990215680/936090758275014767/logo.png">
+        </div>
+
+        <div class="action">
+            <div class="prof-img">
+                <img src="file/<?= $_SESSION['profile_img'] ?>" onclick="menuToggle();" alt="Profile Image">
+            </div>
+            <div class="menu">
+                <img src="file/<?= $_SESSION['profile_img'] ?>" alt="Profile Image">
+                <h3><?= $_SESSION['username'] ?></h3>
+                <ul>
+                    <li><i class="fas fa-user-circle"></i><a href="#">Profile</a></li>
+                    <li><i class="fas fa-user-cog"></i><a href="#">User Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--Header area end-->
+
+    <!--Sidebar start-->
+    <div class="sidebar">
+        <div class="sidebar-icons">
+            <a href="admin-index.php"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+            <a href="user.php"><i class="far fa-user" data-toggle="tooltip" title="Setting"></i><span> Users</span></a>
+            <a href="admin.php"><i class="far fa-user" data-toggle="tooltip" title="Setting"></i><span> Admin</span></a>
+            <a href="logout.php" class="cd-popup-trigger"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+        </div>
+
+    </div>
+    <!--Sidebar end-->
+
+<!--Mobile navbar start-->
+<div class="mobile-nav">
+    <div class="nav-bar">
+        <a href="https://bit.ly/33oNK6I" target="_blank">
+            <img src="file/<?= $_SESSION['profile_img'] ?>" class="mobile-profile-img">
+        </a>
+        <img src="https://cdn.discordapp.com/attachments/917593517990215680/936090758275014767/logo.png">
+        <i class="fas fa-bars nav-btn"></i>
+    </div>
+    <div class="mobile-nav-items">
+        <a href="admin-index.php"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
+        <a href="user.php"><i class="far fa-user" data-toggle="tooltip" title="Setting"></i><span> Users</span></a>
+        <a href="admin.php"><i class="far fa-user" data-toggle="tooltip" title="Setting"></i><span> Admin</span></a>
+        <a href="logout.php" class="cd-popup-trigger"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+    </div>
+</div>
+<!--Mobile Navbar End-->
+
+    <!--Content start here-->
+    <div class="content">
+        <div class="card-header" id="dashboard">
+            <a href="form_edit2.php?id=<?= $_SESSION['id'] ?>">
+            <img src="https://media.discordapp.net/attachments/917593517990215680/939423037374230528/01_team.png" alt="Admin Profile Image">
+                <i class="fas fa-camera">
+                    <p>Change Picture</p>
+                </i>
+            </a>
+            <h1><?= $_SESSION['username'] ?></h1>
+            <p style="font-size: medium;">This is the profile/user description. IDK what else to write here</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h1>Data Pengguna</h1>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h1>Data Pengguna</h1>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h1>Data Pengguna</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Content end here-->
+
+    <div class="fakeLoader"></div>
+    <!-- Java Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/fakeLoader.js"></script>
+
+    <!--Javascript start here-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.nav-btn').click(function() {
+                $('.mobile-nav-items').toggleClass('active');
+            });
+        });
+
+        $('.first-btn').click(function() {
+            $('.sidebar-icons .first-show').toggleClass("show");
+            $('.sidebar-icons li .first-btn .first').toggleClass("rotateX");
+        });
+
+        $('.second-btn').click(function() {
+            $('.sidebar-icons .second-show').toggleClass("show");
+            $('.sidebar-icons li .second-btn .second').toggleClass("rotateX");
+        });
+
+        $('.third-btn').click(function() {
+            $('.sidebar-icons .third-show').toggleClass("show");
+            $('.sidebar-icons li .third-btn .third').toggleClass("rotateX");
+        });
+
+        $('.mobile-first-btn').click(function() {
+            $('.mobile-nav-items .mobile-first-show').toggleClass("show");
+            $('.mobile-nav-items li .mobile-first-btn .first').toggleClass("rotateX");
+        });
+
+        $('.mobile-second-btn').click(function() {
+            $('.mobile-nav-items .mobile-second-show').toggleClass("show");
+            $('.mobile-nav-items li .mobile-second-btn .second').toggleClass("rotateX");
+        });
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+        $(document).ready(function() {
+            $.fakeLoader({
+                bgColor: '#1A374D',
+                spinner: 'spinner2'
+            });
+        });
+    </script>
+    <!--Javascript end here-->
+
+</body>
+
+</html>
