@@ -387,6 +387,11 @@ header .nav-btn {
         color: white;
         width: calc(100%-0px);
     }
+    
+    .content .card-header img {
+        width: 90px;
+        height: 90px;
+    }
 
     .content .card-header .fa-camera {
         display: none;
