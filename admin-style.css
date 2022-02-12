@@ -387,10 +387,14 @@ header .nav-btn {
         color: white;
         width: calc(100%-0px);
     }
-    
+
     .content .card-header img {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .content .card-header p {
+        font-size: x-small;
     }
 
     .content .card-header .fa-camera {
@@ -400,7 +404,7 @@ header .nav-btn {
     .column {
         width: 90%;
         float: left;
-        padding: 0 10px;
+        margin-left: -20px;
     }
 
     .row {
