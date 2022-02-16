@@ -280,11 +280,10 @@ label #sidebar-btn:hover {
 }
 
 .content .card-header {
-    background: black;
+    background: #2b2a28;
     padding-bottom: 55px;
     margin-bottom: 10px;
     font-size: 14px;
-    opacity: 0.8;
     color: white;
 }
 
@@ -346,7 +345,7 @@ header .nav-btn {
     display: block;
     width: 30%;
     margin: -110px auto 90px auto;
-    background-color: black;
+    background-color: transparent;
     text-decoration: none;
 }
 
@@ -378,16 +377,6 @@ header .nav-btn {
         transition: 0.5s;
     }
 
-    .content .card-header {
-        background: black;
-        padding-bottom: 55px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        opacity: 0.8;
-        color: white;
-        width: calc(100%-0px);
-    }
-
     .content .card-header img {
         width: 120px;
         height: 120px;
@@ -404,7 +393,7 @@ header .nav-btn {
     .column {
         width: 90%;
         float: left;
-        margin-left: -20px;
+        margin-left: -10px;
     }
 
     .row {
@@ -418,6 +407,7 @@ header .nav-btn {
     .mobile-nav {
         display: block;
         width: calc(100% - 0%);
+        position: absolute;
         position: fixed;
         top: -70px;
         margin-top: 0;
@@ -426,6 +416,7 @@ header .nav-btn {
         height: 100vh;
         max-height: 100vh;
         overflow-y: scroll;
+        z-index: 1;
     }
 
     .prof-img img {
